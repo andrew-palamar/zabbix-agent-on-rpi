@@ -40,13 +40,13 @@ file='/etc/zabbix/zabbix_agent2.conf'
 if grep -qF "$string" "$file"; then
     echo "String already exists in the destination file."
 else
-    echo "$string" | sudo tee -a "$file"
+    echo -e "\n$string" | sudo tee -a "$file"
 fi
 
 checkexit
 
 # Restart the zabbix agent:
-sudo systemctl restart zabbix-agent
-sudo systemctl status zabbix-agent
+sudo systemctl restart zabbix-agent2
+sudo systemctl status zabbix-agent2
 checkexit
 printf "Installation script completed!\n"
