@@ -4,7 +4,7 @@ Script and template for zabbix-agent2 to run on raspberryPi.
 
 Fetch install script from GitHub:
 ```
-wget https://raw.githubusercontent.com/andrew-palamar/zabbix-agent-on-rpi/master/install.sh
+wget https://raw.githubusercontent.com/andrew-palamar/zabbix-agent-on-rpi/ds18b20/install.sh
 ```
 
 Change permissions for script:

@@ -15,7 +15,7 @@ sudo apt install zabbix-agent2 -y
 sudo mkdir -p /etc/zabbix/scripts
 
 # Fetch script
-sudo wget https://raw.githubusercontent.com/andrew-palamar/zabbix-agent-on-rpi/master/raspberrypi.sh -O /etc/zabbix/scripts/raspberrypi.sh
+sudo wget https://raw.githubusercontent.com/andrew-palamar/zabbix-agent-on-rpi/ds18b20/raspberrypi.sh -O /etc/zabbix/scripts/raspberrypi.sh
 checkexit
 # Change permissions for script:
 sudo chmod 755 /etc/zabbix/scripts/raspberrypi.sh
