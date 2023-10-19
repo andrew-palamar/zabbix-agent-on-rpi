@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2023-10-17T08:39:55Z</date>
+    <date>2023-10-18T11:14:00Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -260,7 +260,7 @@
                 <item>
                     <name>Temperature zone 1</name>
                     <key>raspberrypi.sh[temp1]</key>
-                    <delay>30s</delay>
+                    <delay>60s</delay>
                     <value_type>FLOAT</value_type>
                     <units>C</units>
                     <description>External DS18B20 temperature sensor.</description>
@@ -273,7 +273,7 @@
                 <item>
                     <name>Temperature zone 2</name>
                     <key>raspberrypi.sh[temp2]</key>
-                    <delay>30s</delay>
+                    <delay>60s</delay>
                     <value_type>FLOAT</value_type>
                     <units>C</units>
                     <description>External DS18B20 temperature sensor.</description>
@@ -286,7 +286,7 @@
                 <item>
                     <name>Temperature zone 3</name>
                     <key>raspberrypi.sh[temp3]</key>
-                    <delay>30s</delay>
+                    <delay>60s</delay>
                     <value_type>FLOAT</value_type>
                     <units>C</units>
                     <description>External DS18B20 temperature sensor.</description>
@@ -299,7 +299,7 @@
                 <item>
                     <name>Temperature zone 4</name>
                     <key>raspberrypi.sh[temp4]</key>
-                    <delay>30s</delay>
+                    <delay>60s</delay>
                     <value_type>FLOAT</value_type>
                     <units>C</units>
                     <description>External DS18B20 temperature sensor.</description>
@@ -312,7 +312,7 @@
                 <item>
                     <name>Core temperature</name>
                     <key>raspberrypi.sh[temperature]</key>
-                    <delay>30s</delay>
+                    <delay>60s</delay>
                     <value_type>FLOAT</value_type>
                     <units>C</units>
                     <description>The board / CPU temperature in Degree-Celsius</description>

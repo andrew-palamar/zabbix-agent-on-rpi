@@ -5,31 +5,22 @@
 # modified 2020 Piotr Goczal
 # modifiied 2023 Andrew Palamarchuk - Added 4 external DS18B20 temperature sensors
 
-round() {
-echo $(awk -v val=$1 'BEGIN { rounded = sprintf("%.1f", val/1000); print rounded }')
-}
-
-
 case "$1" in
         temp1)
                 # get First DS18B20 Temperature
-                value=$(cat /sys/bus/w1/devices/28-3cfff0958058/temperature)
-                round $value
-               ;;
+                cat /tmp/28-3c25e381a90f
+                ;;
         temp2)
                 # get Second DS18B20 Temperature
-                value=$(cat /sys/bus/w1/devices/28-3c01f0952d61/temperature)
-                round $value
+                cat /tmp/28-3c28e381bf9d
                 ;;
         temp3)
                 # get Third DS18B20 Temperature
-                value=$(cat /sys/bus/w1/devices/28-3cfff0958058/temperature)
-                round $value
+                cat /tmp/28-3c52e381f9c9
                 ;;
         temp4)
                 # get Fourth DS18B20 Temperature
-                value=$(cat /sys/bus/w1/devices/28-3cfff0958058/temperature)
-                round $value
+                cat /tmp/28-3c8ae3819f48
                 ;;
         boardrevision)
                 # get the Hardware Revision
@@ -145,10 +136,11 @@ case "$1" in
                 ;;
         throttlestate)
                 # throttle state, for more information: 
-		        # https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=147781&start=50#p972790
+	        # https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=147781&start=50#p972790
                 /usr/bin/vcgencmd get_throttled | sed s/"throttled="//g | perl -e '$number = hex(<STDIN>); printf "%.32b\n", $number'
                 ;;
         *)
                 echo "Usage: $N {temp1|temp2|temp3|temp4|boardrevision|boardversion|boardserialnumber|coreclock|cpuvoltage|cpuclock|h264clock|ispclock|v3dclock|uartclock|pwmclock|emmcclock|pixelclock|vecclock|hdmiclock|dpiclock|cpumem|firmwareversion|gpumem|sdcardtotalsize|sdcardused|sdcardusedpercent|sdcardfree|sdramcvoltage|sdramivoltage|sdrampvoltage|temperature}" >&2
 esac
 exit 0
+
